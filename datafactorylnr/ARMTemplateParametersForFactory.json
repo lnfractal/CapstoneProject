@@ -5,11 +5,11 @@
 		"factoryName": {
 			"value": "datafactorylnr"
 		},
-		"GitHub1_credential": {
+		"AzureDataLakeStorage1_accountKey": {
 			"value": ""
 		},
-		"GitHub1_properties_typeProperties_username": {
-			"value": "lakshmi.narayanan@fractal.ai"
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://capstonedatalnr.dfs.core.windows.net/"
 		}
 	}
 }
