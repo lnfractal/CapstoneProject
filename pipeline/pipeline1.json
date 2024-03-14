@@ -1,0 +1,54 @@
+{
+	"name": "pipeline1",
+	"properties": {
+		"activities": [
+			{
+				"name": "First file",
+				"type": "WebActivity",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"method": "GET",
+					"linkedServices": [
+						{
+							"referenceName": "GitHub1",
+							"type": "LinkedServiceReference"
+						}
+					],
+					"url": "https://github.com/lnfractal/CapstoneProject/blob/main/StudentCourseCompletionStatus.xlsx"
+				}
+			},
+			{
+				"name": "Second file",
+				"type": "WebActivity",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"method": "GET",
+					"linkedServices": [
+						{
+							"referenceName": "GitHub1",
+							"type": "LinkedServiceReference"
+						}
+					],
+					"url": "https://github.com/lnfractal/CapstoneProject/blob/main/StudentCourseDetails.xlsx"
+				}
+			}
+		],
+		"annotations": []
+	}
+}
