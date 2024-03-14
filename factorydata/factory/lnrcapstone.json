@@ -1,0 +1,9 @@
+{
+	"name": "lnrcapstone",
+	"properties": {
+		"globalConfigurations": {
+			"PipelineBillingEnabled": "true"
+		}
+	},
+	"location": "centralindia"
+}
