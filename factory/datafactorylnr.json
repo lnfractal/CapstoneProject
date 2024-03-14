@@ -1,0 +1,9 @@
+{
+	"name": "datafactorylnr",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "dcdd9fa0-e8a8-4f93-be77-2c94855d80a1",
+		"tenantId": "75837761-d566-4051-8e8a-471c7d3933a9"
+	}
+}
