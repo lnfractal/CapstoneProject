@@ -23,6 +23,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'credential' of 'GitHub1'"
 		},
+		"ADLSGithubCourseCompletion_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ADLSGithubCourseCompletion'"
+		},
 		"ADLSfromGithub_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://capstonedatalnr.dfs.core.windows.net/"
@@ -46,6 +50,18 @@
 		"HttpServer2_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://github.com/lnfractal/CapstoneProject/blob/main/StudentCourseDetails.xlsx"
+		},
+		"StudentCourseCompltn_HTTP_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://github.com/lnfractal/CapstoneProject/blob/1dd125aecc36c90ae0d4c06fb3b98860f560620f/StudentCourseCompletionStatus.xlsx"
+		},
+		"ADLSGithubCourseCompletion_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://capstonedatalnr.dfs.core.windows.net/"
+		},
+		"CourseDetails_HTTP_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://github.com/lnfractal/CapstoneProject/blob/0d952169daf4f58d1950f829d80242394d5efc40/StudentCourseDetails.xlsx"
 		},
 		"containerUri": {
 			"type": "string",
@@ -86,6 +102,9 @@
 					"GitHub1_credential": {
 						"value": "[parameters('GitHub1_credential')]"
 					},
+					"ADLSGithubCourseCompletion_accountKey": {
+						"value": "[parameters('ADLSGithubCourseCompletion_accountKey')]"
+					},
 					"ADLSfromGithub_properties_typeProperties_url": {
 						"value": "[parameters('ADLSfromGithub_properties_typeProperties_url')]"
 					},
@@ -103,10 +122,39 @@
 					},
 					"HttpServer2_properties_typeProperties_url": {
 						"value": "[parameters('HttpServer2_properties_typeProperties_url')]"
+					},
+					"StudentCourseCompltn_HTTP_properties_typeProperties_url": {
+						"value": "[parameters('StudentCourseCompltn_HTTP_properties_typeProperties_url')]"
+					},
+					"ADLSGithubCourseCompletion_properties_typeProperties_url": {
+						"value": "[parameters('ADLSGithubCourseCompletion_properties_typeProperties_url')]"
+					},
+					"CourseDetails_HTTP_properties_typeProperties_url": {
+						"value": "[parameters('CourseDetails_HTTP_properties_typeProperties_url')]"
 					}
 				}
 			},
 			"dependsOn": []
+		},
+		{
+			"name": "datafactorylnr_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'datafactorylnr_ArmTemplate_0')]"
+			]
 		}
 	]
 }

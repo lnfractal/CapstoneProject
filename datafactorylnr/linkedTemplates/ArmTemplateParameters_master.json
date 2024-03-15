@@ -17,6 +17,9 @@
 		"GitHub1_credential": {
 			"value": ""
 		},
+		"ADLSGithubCourseCompletion_accountKey": {
+			"value": ""
+		},
 		"ADLSfromGithub_properties_typeProperties_url": {
 			"value": "https://capstonedatalnr.dfs.core.windows.net/"
 		},
@@ -34,6 +37,15 @@
 		},
 		"HttpServer2_properties_typeProperties_url": {
 			"value": "https://github.com/lnfractal/CapstoneProject/blob/main/StudentCourseDetails.xlsx"
+		},
+		"StudentCourseCompltn_HTTP_properties_typeProperties_url": {
+			"value": "https://github.com/lnfractal/CapstoneProject/blob/1dd125aecc36c90ae0d4c06fb3b98860f560620f/StudentCourseCompletionStatus.xlsx"
+		},
+		"ADLSGithubCourseCompletion_properties_typeProperties_url": {
+			"value": "https://capstonedatalnr.dfs.core.windows.net/"
+		},
+		"CourseDetails_HTTP_properties_typeProperties_url": {
+			"value": "https://github.com/lnfractal/CapstoneProject/blob/0d952169daf4f58d1950f829d80242394d5efc40/StudentCourseDetails.xlsx"
 		},
 		"containerUri": {
 			"value": ""
