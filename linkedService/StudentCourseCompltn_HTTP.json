@@ -1,0 +1,12 @@
+{
+	"name": "StudentCourseCompltn_HTTP",
+	"properties": {
+		"annotations": [],
+		"type": "HttpServer",
+		"typeProperties": {
+			"url": "https://github.com/lnfractal/CapstoneProject/blob/1dd125aecc36c90ae0d4c06fb3b98860f560620f/StudentCourseCompletionStatus.xlsx",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Anonymous"
+		}
+	}
+}
