@@ -1,0 +1,19 @@
+{
+	"name": "File2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "HttpServer2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"sheetName": "Sheet1",
+			"location": {
+				"type": "HttpServerLocation"
+			},
+			"firstRowAsHeader": true
+		},
+		"schema": []
+	}
+}
